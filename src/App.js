@@ -1,20 +1,26 @@
-
-import './App.css';
-import Titulo from "./components/Titulo"
+import React, { useState } from "react"
+import { ThemeProvider } from "styled-components" 
+import GlobalStyle from "./styles/GlobalStyle"
+import SignupForm from "./components/SignupForm"
+import light from "./styles/themes/light"
+import dark from "./styles/themes/dark"
+import Toggle from "./components/Toggle"
 
 const App = () => {
+  const [theme, setTheme] = useState(light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === "light" ? dark : light);
+  }
+
   return (
-    <div className="temas-app">
-      <Titulo title = "Sign up to my newsletter" />
-      <form className="temas-form" onSubmit={() => {}}> 
-        <input 
-          type="text"
-          placeholder="my@email.com"
-          className="temas-input"
-        />      
-        <button className="temas-button">Sign up</button>        
-      </form>
-    </div>
+      <ThemeProvider theme={theme}>
+      <div className="theme-app">
+        <GlobalStyle />        
+        <SignupForm />               
+        <Toggle theme={theme} toggleTheme={toggleTheme}/>
+      </div>
+    </ThemeProvider>
   );
 }
 
