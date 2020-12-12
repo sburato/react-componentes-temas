@@ -12,7 +12,7 @@ export default createGlobalStyle`
     color: ${({theme}) => theme.colors.text};
     font-size: 14px;    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
-    transition: all 0.3s linear;      
+    transition: all 0.2s linear;      
   }
 
   header h1 {
