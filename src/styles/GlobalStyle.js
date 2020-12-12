@@ -31,7 +31,7 @@ export default createGlobalStyle`
     margin: 128px auto;
   }  
 
-  .button {
+  .theme-button {
     background-color: ${({theme}) => theme.colors.buttonBackground}; 
     color: ${({theme}) => theme.colors.buttonText};
     font-size: 20px;                    

@@ -13,7 +13,7 @@ const DarkModeButton = styled.button`{
   padding: 0.6rem;    
 
   &:hover {
-    opacity: 0.8; 
+    opacity: 0.5; 
   }  
 `;
 
